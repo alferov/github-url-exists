@@ -1,0 +1,33 @@
+{
+  "name": "is-valid-github-url",
+  "version": "1.0.0",
+  "description": "Check if passed link is a valid GitHub url (belongs to github.com and doesn't return an error)",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --reporter nyan",
+    "tdd": "npm test -- --watch"
+  },
+  "keywords": [
+    "gh",
+    "github",
+    "valid",
+    "link",
+    "url"
+  ],
+  "devDependencies": {
+    "chai": "^3.2.0",
+    "eslint": "^1.4.1",
+    "mocha": "^2.3.0"
+  },
+  "author": {
+    "name": "Philipp Alferov",
+    "email": "philipp.alferov@gmail.com"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "got": "^4.2.0"
+  }
+}
