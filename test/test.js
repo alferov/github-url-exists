@@ -3,7 +3,7 @@ var chai = require('chai');
 var isValidURL = require('../index.js');
 var expect = chai.expect;
 
-describe('is-valid-github-url', function() {
+describe('github-url-exists', function() {
   it('should throw an error if passed arguments are not correct', function() {
     expect(isValidURL.bind(null))
       .to.throw(/must be a non-empty string/);

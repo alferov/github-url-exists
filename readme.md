@@ -1,23 +1,23 @@
-# is-valid-github-url
+# github-url-exists
 
-> Check if a passed string is a valid GitHub URL (doesn't return an error)
+> Check if passed GitHub link exists and doesn't return an error
 
 ## Install
 
 ```
-$ npm install --save is-valid-github-url
+$ npm install --save github-url-exists
 ```
 
 ## Usage
 ```js
-var isValidUrl = require('is-valid-github-url');
+var isValidUrl = require('github-url-exists');
 ```
 
 ## API
 
 ### `isValidGithubUrl()`
 
-Check if a passed string is a valid GitHub URL (doesn't return an error)
+Check if passed GitHub link exists and doesn't return an error
 
 #### Params
 
