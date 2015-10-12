@@ -6,10 +6,13 @@ var expect = chai.expect;
 describe('is-valid-github-url', function() {
   it('should throw an error if passed arguments are not correct', function() {
     expect(isValidURL.bind(null))
-      .to.throw(/should be a string/);
+      .to.throw(/must be a non-empty string/);
+
+    expect(isValidURL.bind(null, '', null))
+      .to.throw(/must be a non-empty string/);
 
     expect(isValidURL.bind(null, 'hello', null))
-      .to.throw(/should be a function/);
+      .to.throw(/must be a function/);
   });
 
   it('should return true if url is valid', function (done) {

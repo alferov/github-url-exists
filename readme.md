@@ -1,6 +1,6 @@
 # is-valid-github-url
 
-> Check if passed link is a valid GitHub url (belongs to github.com and doesn't return an error)
+> Check if a passed string is a valid GitHub URL (doesn't return an error)
 
 ## Install
 
@@ -17,7 +17,7 @@ var isValidUrl = require('is-valid-github-url');
 
 ### `isValidGithubUrl()`
 
-Check if passed link is a valid GitHub url (belongs to github.com and doesn't return an error)
+Check if a passed string is a valid GitHub URL (doesn't return an error)
 
 #### Params
 
