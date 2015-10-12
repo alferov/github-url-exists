@@ -1,4 +1,5 @@
 'use strict';
+var got = require('got');
 
 /**
  * isValidGithubUrl
@@ -21,4 +22,17 @@ module.exports = function (url, cb) {
     throw new TypeError('Callback should be a function');
   }
 
+  got.head(url, function (err) {
+    if (err && err.statusCode === 404) {
+      cb(null, false);
+      return ;
+    }
+
+    if (err) {
+      cb(err);
+      return ;
+    }
+
+    cb(null, true);
+  });
 };
