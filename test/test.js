@@ -1,22 +1,22 @@
 'use strict';
 var chai = require('chai');
-var isValidURL = require('../index.js');
+var ghUrlExists = require('../index.js');
 var expect = chai.expect;
 
 describe('github-url-exists', function() {
   it('should throw an error if passed arguments are not correct', function() {
-    expect(isValidURL.bind(null))
+    expect(ghUrlExists.bind(null))
       .to.throw(/must be a non-empty string/);
 
-    expect(isValidURL.bind(null, '', null))
+    expect(ghUrlExists.bind(null, '', null))
       .to.throw(/must be a non-empty string/);
 
-    expect(isValidURL.bind(null, 'hello', null))
+    expect(ghUrlExists.bind(null, 'hello', null))
       .to.throw(/must be a function/);
   });
 
   it('should return true if url is valid', function (done) {
-    isValidURL('https://github.com/alferov/awesome-gulp', function (err, valid) {
+    ghUrlExists('https://github.com/alferov/awesome-gulp', function (err, valid) {
       expect(err).to.be.null;
       expect(valid).to.be.true;
       done();
@@ -24,7 +24,23 @@ describe('github-url-exists', function() {
   });
 
   it('should return false if url is not valid', function (done) {
-    isValidURL('https://github.com/thisisnotthepage/thisisnotthepage', function (err, isValid) {
+    ghUrlExists('https://github.com/thisisnotthepage/thisisnotthepage', function (err, isValid) {
+      expect(err).to.be.null;
+      expect(isValid).to.be.false;
+      done();
+    });
+  });
+
+  it('should return false if url is not valid', function (done) {
+    ghUrlExists('https://github.com/thisisnotthepage/thisisnotthepage', function (err, isValid) {
+      expect(err).to.be.null;
+      expect(isValid).to.be.false;
+      done();
+    });
+  });
+
+  it('should return false if url does not belong to github domain', function (done) {
+    ghUrlExists('https://google.com/', function (err, isValid) {
       expect(err).to.be.null;
       expect(isValid).to.be.false;
       done();
