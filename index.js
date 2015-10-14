@@ -3,10 +3,14 @@ var got = require('got');
 
 /**
  * githubUrlExists
- * Check if passed link is a valid GitHub URL (it exists and doesn't return an error)
+ * Check if a string is a valid and existent GitHub URL
  *
  * @name githubUrlExists
  * @function
+ *
+ * @param {String} url A string to be tested
+ * @param {Function} cb The callback function
+ *
  * @return
  */
 
