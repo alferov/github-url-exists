@@ -1,7 +1,7 @@
 {
   "name": "github-url-exists",
   "version": "1.0.0",
-  "description": "Check if a string is a valid and existent GitHub URL",
+  "description": "Check if a URL is a valid and existent GitHub URL",
   "main": "index.js",
   "scripts": {
     "test": "mocha --reporter nyan",

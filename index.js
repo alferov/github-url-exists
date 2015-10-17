@@ -2,9 +2,13 @@
 var got = require('got');
 var getGhUrl = require('get-github-url');
 
+var isFunction = function(fn) {
+  return fn && {}.toString.call(fn) === '[object Function]';
+}
+
 /**
  * githubUrlExists
- * Check if a string is a valid and existent GitHub URL
+ * Check if a URL is a valid and existent GitHub URL
  *
  * @name githubUrlExists
  * @function
@@ -14,10 +18,6 @@ var getGhUrl = require('get-github-url');
  *
  * @return
  */
-
-var isFunction = function(fn) {
-  return fn && {}.toString.call(fn) === '[object Function]';
-}
 
 module.exports = function githubUrlExists(url, cb) {
   if (typeof url !== 'string' || !url.length) {
