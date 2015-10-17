@@ -40,7 +40,7 @@ describe('github-url-exists', function() {
   });
 
   it('should return false if url does not belong to github domain', function (done) {
-    ghUrlExists('https://google.com/', function (err, isValid) {
+    ghUrlExists('amazon.ca', function (err, isValid) {
       expect(err).to.be.null;
       expect(isValid).to.be.false;
       done();

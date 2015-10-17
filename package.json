@@ -30,6 +30,7 @@
   },
   "license": "MIT",
   "dependencies": {
+    "get-github-url": "^1.0.0",
     "got": "^4.2.0"
   }
 }
