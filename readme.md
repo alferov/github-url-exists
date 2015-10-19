@@ -19,7 +19,7 @@ ghUrlExists('https://github.com/alferov/awesome-gulp', function (err, valid) {
   console.log(valid); // => true
 });
 
-ghUrlExists('https://github.com/thisisnotthepage/thisisnotthepage', function (err, isValid) {
+ghUrlExists('https://github.com/notthepage/notthepage', function (err, valid) {
   if (err) {
     // Handle errors
   }
@@ -27,7 +27,7 @@ ghUrlExists('https://github.com/thisisnotthepage/thisisnotthepage', function (er
   console.log(valid); // => false
 });
 
-ghUrlExists('google.com/', function (err, isValid) {
+ghUrlExists('google.com/', function (err, valid) {
   if (err) {
     // Handle errors
   }
