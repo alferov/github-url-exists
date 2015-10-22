@@ -1,4 +1,4 @@
-# github-url-exists
+# github-url-exists [![Build Status](https://travis-ci.org/alferov/github-url-exists.svg?branch=master)](https://travis-ci.org/alferov/github-url-exists)
 
 > Check if a URL is a valid and existent GitHub URL
 

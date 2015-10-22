@@ -31,7 +31,7 @@
   },
   "license": "MIT",
   "dependencies": {
-    "get-github-url": "^1.0.2",
-    "got": "^4.2.0"
+    "got": "^4.2.0",
+    "is-github-url": "^1.1.2"
   }
 }

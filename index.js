@@ -1,6 +1,6 @@
 'use strict';
 var got = require('got');
-var getGhUrl = require('get-github-url');
+var isGhUrl = require('is-github-url');
 
 var isFunction = function(fn) {
   return fn && {}.toString.call(fn) === '[object Function]';
@@ -28,14 +28,12 @@ module.exports = function githubUrlExists(url, cb) {
     throw new TypeError('Callback must be a function');
   }
 
-  var transform = getGhUrl(url);
-
-  if (!transform) {
+  if (!isGhUrl(url)) {
     cb(null, false);
     return ;
   }
 
-  got.head(transform, function (err) {
+  got.head(url, function (err) {
     if (err && err.statusCode === 404 ) {
       cb(null, false);
       return ;
