@@ -1,7 +1,7 @@
 {
   "name": "github-url-exists",
   "version": "1.0.4",
-  "description": "Check if a URL is a valid and existent GitHub URL",
+  "description": "Check if a URL is a valid and existent GitHub HTTP(s) URL",
   "main": "index.js",
   "scripts": {
     "release": "npm version ${BUMP:-\"patch\"} --no-git-tag-version && git add package.json && git commit -m \":octocat: Bump to $(cat package.json | jq -r .version)\" && git tag $(cat package.json | jq -r .version) && git push && git push --tags && npm publish",
