@@ -4,12 +4,14 @@ var ghUrlExists = require('../index.js');
 var expect = chai.expect;
 
 var validURLs = [
-  'https://github.com/alferov/awesome-gulp',
+  'https://github.com',
   'https://github.com/alferov',
-  'https://github.com'
+  'https://github.com/alferov/awesome-gulp',
+  'https://github.com/alferov/awesome-gulp.git'
 ];
 
 var invalidURLs = [
+  'git@github.com:alferov/awesome-gulp.git',
   'https://github.com/thisisnotthepage/thisisnotthepage',
   'https://github.com/thisisnotthepagfdd',
   'https://google.com'
