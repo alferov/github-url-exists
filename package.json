@@ -1,6 +1,6 @@
 {
   "name": "github-url-exists",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Check if a URL is a valid and existent GitHub HTTP(s) URL",
   "main": "index.js",
   "scripts": {
