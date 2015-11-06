@@ -36,17 +36,16 @@ module.exports = function githubUrlExists(url, cb) {
     return ;
   }
 
-  got.head(url, function (err) {
-    if (err && err.statusCode === 404 ) {
-      cb(null, false);
-      return ;
-    }
+  got(url)
+    .then(function() {
+      cb(null, true);
+    })
+    .catch(function(err) {
+      if (err.statusCode === 404 ) {
+        cb(null, false);
+        return ;
+      }
 
-    if (err) {
       cb(err);
-      return ;
-    }
-
-    cb(null, true);
-  });
+    });
 };
