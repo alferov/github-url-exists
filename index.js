@@ -1,9 +1,12 @@
 'use strict';
 var got = require('got');
-var isGhUrl = require('is-github-url');
 
 var isFunction = function(fn) {
   return fn && {}.toString.call(fn) === '[object Function]';
+}
+
+var isGhUrl = function(url) {
+  return url.indexOf('github.com') >= 0;
 }
 
 /**
